@@ -13,7 +13,7 @@ pub use async_std::task::yield_now;
 pub type Arc<T> = std::sync::Arc<T>;
 
 #[cfg(feature = "runtime-tokio")]
-pub type Mutex<T> = tokio::sync::Mutex<T>;
+pub type Mutex<T> = futures::lock::Mutex<T>;
 
 #[cfg(feature = "runtime-tokio")]
 pub use tokio::task::yield_now;
